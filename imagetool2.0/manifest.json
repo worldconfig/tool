@@ -1,0 +1,45 @@
+{
+  "manifest_version": 3,
+  "name": "图片尺寸调整器",
+  "version": "2.0",
+  "description": "拖拽图片到侧边栏，按照预设调整尺寸并保存到指定文件夹",
+  "permissions": [
+    "storage",
+    "sidePanel",
+    "activeTab",
+    "downloads",
+    "scripting",
+    "contextMenus"
+  ],
+  "host_permissions": [
+    "<all_urls>"
+  ],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "side_panel": {
+    "default_path": "sidepanel.html"
+  },
+  "action": {
+    "default_title": "打开图片调整侧边栏",
+    "default_popup": "popup.html"
+  },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["content.js"],
+      "css": ["content.css"]
+    }
+  ],
+  "icons": {
+    "16": "icons/icon16.png",
+    "48": "icons/icon48.png",
+    "128": "icons/icon128.png"
+  },
+  "web_accessible_resources": [
+    {
+      "resources": ["sidepanel.html"],
+      "matches": ["<all_urls>"]
+    }
+  ]
+}

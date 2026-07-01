@@ -1,0 +1,284 @@
+body {
+  margin: 0;
+  padding: 15px;
+  font-family: Arial, sans-serif;
+  width: 100%;
+  min-width: 250px;
+  max-height: 100vh;
+  overflow-y: auto;
+  box-sizing: border-box;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+h2 {
+  margin: 0 0 15px 0;
+  color: #333;
+  text-align: center;
+  font-size: clamp(16px, 4vw, 20px);
+  word-wrap: break-word;
+}
+
+.drop-zone {
+  border: 3px dashed #ccc;
+  border-radius: 10px;
+  padding: 20px;
+  text-align: center;
+  background: #f8f9fa;
+  cursor: pointer;
+  transition: all 0.3s;
+  box-sizing: border-box;
+  width: 100%;
+}
+
+.drop-zone.drag-over {
+  border-color: #4CAF50;
+  background: #e8f5e9;
+}
+
+.drop-zone:hover {
+  border-color: #2196F3;
+}
+
+.drop-icon {
+  font-size: clamp(32px, 8vw, 48px);
+  margin-bottom: 10px;
+}
+
+.drop-hint {
+  font-size: 12px;
+  color: #666;
+  margin: 5px 0;
+}
+
+.settings {
+  background: #f5f5f5;
+  border-radius: 8px;
+  padding: 15px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.setting-group {
+  margin-bottom: 15px;
+}
+
+.setting-group:last-child {
+  margin-bottom: 0;
+}
+
+.setting-group label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+  font-size: clamp(12px, 2.5vw, 14px);
+  word-wrap: break-word;
+}
+
+.setting-group select,
+.setting-group input[type="text"],
+.setting-group input[type="number"] {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: clamp(12px, 2vw, 14px);
+  box-sizing: border-box;
+}
+
+.custom-size {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.custom-size input {
+  flex: 1;
+  min-width: 60px;
+}
+
+.custom-size span {
+  font-weight: bold;
+  white-space: nowrap;
+}
+
+.custom-size button {
+  flex: 0 0 auto;
+  min-width: fit-content;
+  padding: 8px 12px;
+  font-size: clamp(11px, 2vw, 13px);
+  white-space: nowrap;
+}
+
+.image-list {
+  max-height: 300px;
+  overflow-y: auto;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  padding: 10px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.image-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px;
+  border-bottom: 1px solid #eee;
+  flex-wrap: wrap;
+}
+
+.image-item:last-child {
+  border-bottom: none;
+}
+
+.image-preview {
+  width: clamp(40px, 10vw, 50px);
+  height: clamp(40px, 10vw, 50px);
+  min-width: 40px;
+  min-height: 40px;
+  object-fit: cover;
+  border-radius: 4px;
+  flex-shrink: 0;
+}
+
+.image-info {
+  flex: 1;
+  min-width: 100px;
+  font-size: clamp(11px, 2vw, 12px);
+}
+
+.image-info .name {
+  font-weight: bold;
+  margin-bottom: 3px;
+}
+
+.image-info .size {
+  color: #666;
+}
+
+.process-button {
+  padding: 6px 10px;
+  background: #4CAF50;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: clamp(11px, 2vw, 12px);
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+
+.delete-button {
+  padding: 6px 10px;
+  background: #f44336;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: clamp(11px, 2vw, 12px);
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+
+.delete-button:hover {
+  background: #d32f2f;
+}
+
+.action-buttons {
+  display: flex;
+  gap: 10px;
+}
+
+button {
+  padding: 10px 15px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: clamp(12px, 2.5vw, 14px);
+  transition: background 0.3s;
+  flex: 1;
+  min-width: 0;
+  box-sizing: border-box;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+#processAll {
+  background: #4CAF50;
+  color: white;
+}
+
+#processAll:hover:not(:disabled) {
+  background: #45a049;
+}
+
+#processAll:disabled {
+  background: #cccccc;
+  cursor: not-allowed;
+}
+
+#clearAll {
+  background: #f44336;
+  color: white;
+}
+
+#clearAll:hover {
+  background: #d32f2f;
+}
+
+#browseButton {
+  margin-top: 10px;
+  background: #2196F3;
+  color: white;
+}
+
+#browseButton:hover {
+  background: #1976D2;
+}
+
+#selectAll {
+  margin-top: 5px;
+  background: #FF9800;
+  color: white;
+  font-size: 12px;
+  padding: 5px 10px;
+}
+
+.status {
+  padding: 10px;
+  border-radius: 5px;
+  text-align: center;
+  font-size: clamp(12px, 2.5vw, 14px);
+  display: none;
+  word-wrap: break-word;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.status.success {
+  background: #d4edda;
+  color: #155724;
+  display: block;
+}
+
+.status.error {
+  background: #f8d7da;
+  color: #721c24;
+  display: block;
+}
+
+.status.processing {
+  background: #d1ecf1;
+  color: #0c5460;
+  display: block;
+}

@@ -1,0 +1,87 @@
+body {
+  width: 400px;
+  padding: 15px;
+  font-family: Arial, sans-serif;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+h3, h4 {
+  margin: 0 0 10px 0;
+  color: #333;
+}
+
+button {
+  padding: 8px 16px;
+  background: #4CAF50;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+button:hover {
+  background: #45a049;
+}
+
+.section {
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  padding: 15px;
+  background: #f9f9f9;
+}
+
+.form-group {
+  margin-bottom: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.form-group label {
+  font-weight: bold;
+  font-size: 13px;
+}
+
+.form-group input, .form-group select {
+  padding: 6px;
+  border: 1px solid #ddd;
+  border-radius: 3px;
+  font-size: 14px;
+}
+
+.form-group-row {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+.preset-item {
+  background: white;
+  border: 1px solid #ddd;
+  border-radius: 3px;
+  padding: 8px;
+  margin-bottom: 5px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.preset-item span {
+  font-size: 13px;
+}
+
+.delete-preset {
+  background: #f44336;
+  padding: 4px 8px;
+  font-size: 12px;
+}
+
+.delete-preset:hover {
+  background: #d32f2f;
+}

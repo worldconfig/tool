@@ -1,0 +1,9 @@
+/* 为可拖拽的图片添加样式 */
+img[draggable="true"] {
+  transition: opacity 0.2s;
+}
+
+img[draggable="true"]:hover {
+  outline: 2px dashed #4CAF50;
+  outline-offset: 2px;
+}
